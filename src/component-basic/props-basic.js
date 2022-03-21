@@ -63,12 +63,27 @@ const PersonProfile = function({ name, age, gender, profile, highlight }) {
     )
 }
 
+const PersonProfileWithUserObject = function(props){
+    return (
+        <div className='person' style={props.highlight ? {color: 'red'} : null}>
+            <h1>Profile</h1>
+            <img src={props.person.profile} />
+            <p>name : {props.person.name}</p>
+            <p>age : {props.person.age}</p>
+            <p>gender : {props.person.gender}</p>
+        </div>
+    )
+}
+
 const anotherPerson = {
     name: 'Jane',
     age: 28,
     gender: 'female',
     profile: 'https://randomuser.me/api/portraits/women/75.jpg'
 }
+
+const {name: n2, gender, ...rest} = anotherPerson
+
 
 ReactDOM.render(
     <div>
@@ -78,7 +93,8 @@ ReactDOM.render(
         <ComponentWithProps value={() => { }} /> */}
         {/* <Greeting name="김미림" /> */}
         {/* <Sum x = {1} y = {2} /> */}
-        <PersonProfile name='John' age={35} gender='male'
+        {/* <PersonProfile name='John' age={35} gender='male'
     profile='https://randomuser.me/api/portraits/men/75.jpg' />
-    <PersonProfile {...anotherPerson} highlight/>
+    <PersonProfile {...anotherPerson} highlight/> */}
+    <PersonProfileWithUserObject person={anotherPerson} highlight/>
     </div>, document.getElementById('root'))
