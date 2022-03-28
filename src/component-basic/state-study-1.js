@@ -7,9 +7,9 @@ function Counter(props){
     return(
         <div>
             <h1>{count}</h1>
-            <button onClick={() => setCount(count + 1)}>증가</button>
+            <button onClick={() => setCount(prev => prev + 1)}>증가</button>
             <h1>{text}</h1>
-            <button onClick={() => setCount(count - 1)}>감소</button>
+            <button onClick={() => setCount(asdf => asdf + 1)}>감소</button>
         </div>
     )
 }
@@ -23,6 +23,6 @@ const UserProfile = function(props){
 }
 
 ReactDOM.render(
-    <UserProfile />,
+    <Counter />,
     document.getElementById('root')
 )
