@@ -7,4 +7,5 @@
 // import './component-basic/state-study-1'
 // import './component-basic/state-study-3'
 // import './component-intermediate/counter-demo'
-import './component-intermediate/manipulate-list'
+// import './component-intermediate/manipulate-list'
+import './component-intermediate/todo-app-demo'
